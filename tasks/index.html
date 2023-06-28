@@ -1,33 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
 
-    <link rel="stylesheet" href="./styles.css" />
+  <!-- Fontes -->
 
-    <title>Tasks</title>
-  </head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+  <!---->
+
+  <meta charset="UTF-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="./styles.css" />
+
+  <title>Tasks</title>
+</head>
+
+<body>
+  <header>
+    <div id="header">
+      <div id="user">
+        <img src="./images/user.svg" alt="Imagem do Usuário" />
+
+        <p id="username">Nome do usuário</p>
+      </div>
+
+      <img src="./images/log_out.svg" alt="Ícone de Porta" id="log_out" />
+    </div>
+  </header>
+
   <body>
-    <header>
-      <img src="./images/user.jpg" alt="Imagem do Usuário" />
+    <div class="tasks">
 
-      <p>Nome do usuário</p>
+      <div id = "tasks-texts">
 
-      <img src="./images/log_out.png" alt="Ícone de Porta" />
-    </header>
-
-    <body>
-      <div class="tasks">
-        
         <h5>T</h5>
-
-        <input type="checkbox" id = "status" name = "asd">
 
         <p>Fazer...</p>
 
       </div>
-    </body>
+
+
+      <input type="checkbox" id="status" name="asd" />
+
+    </div>
   </body>
+</body>
+
 </html>
