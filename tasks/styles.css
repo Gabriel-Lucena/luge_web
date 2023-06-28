@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+
+  align-items: center;
+}
+
+header {
+  width: 100%;
+}
+
+.task {
+  margin: auto;
+}
