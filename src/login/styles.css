@@ -10,12 +10,9 @@
 
 body {
   font-family: "Open Sans", sans-serif;
-  margin: 0px;
-  padding: 0px;
 
   background: linear-gradient(45deg, rgba(9, 9, 221, 0.877), rgb(20, 160, 62));
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-size: 400% 400%;
 }
 
 #login {
@@ -70,7 +67,7 @@ button:hover {
 
 button:active {
   background-color: aliceblue;
-  transition: .02s;
+  transition: 0.02s;
 }
 
 p {
