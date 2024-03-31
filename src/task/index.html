@@ -1,23 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect href="https://fonts.gstatic.com" crossorigin />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
-    />
-
-    <link rel="stylesheet" href="./styles.css" />
-    <title>Tasks</title>
+    <title>Lista de Tarefas</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="task">
-      <h2>Nome da Tarefa</h2>
-      <p>Texto da Tarefa</p>
+    <div class="todo-container">
+      <h2>Lista de Tarefas</h2>
+      <button class="logout-button">Logoff</button>
+      <ul class="todo-list">
+        <li>
+          <input type="checkbox" id="task1" name="task1" />
+          <label for="task1">Comprar leite</label>
+        </li>
+        <li>
+          <input type="checkbox" id="task2" name="task2" />
+          <label for="task2">Enviar e-mail</label>
+        </li>
+        <li>
+          <input type="checkbox" id="task3" name="task3" />
+          <label for="task3">Estudar HTML/CSS</label>
+        </li>
+      </ul>
     </div>
   </body>
 </html>
