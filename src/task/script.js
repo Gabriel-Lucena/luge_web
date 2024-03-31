@@ -42,6 +42,12 @@ document.addEventListener("DOMContentLoaded", function () {
         input.id = "task" + task.idTask;
         input.name = "task" + task.idTask;
 
+        if (task.status) {
+          input.checked = true
+        } else {
+          input.checked = false
+        }
+
         const div = document.createElement("div");
         div.className = "todo-text";
 
