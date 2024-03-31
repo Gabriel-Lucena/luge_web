@@ -1,3 +1,11 @@
+function setCookie(name, value, days) {
+  const date = new Date();
+  date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+  const expires = "expires=" + date.toUTCString();
+  document.cookie = name + "=" + value + ";" + expires + ";path=/";
+}
+
+
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("loginForm");
 
@@ -20,7 +28,9 @@ document.addEventListener("DOMContentLoaded", function () {
       .then(response => response.json())
       .then(data => {
         if (data === 1) {
-          // Redirecionar para a página de tarefas
+
+          setCookie("username", username, 1);
+
           window.location.href = "../task/index.html";
         } else {
           alert("Erro ao fazer login. Tente novamente.");
