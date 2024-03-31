@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
       // Montar o HTML das tarefas com base na resposta da requisição
       const tasksList = document.getElementById("tasksList");
 
-      data.forEach((task, index) => {
+      data.forEach((task) => {
         const li = document.createElement("li");
 
         const input = document.createElement("input");
@@ -54,7 +54,7 @@ document
   .getElementById("logoutButton")
   .addEventListener("click", function () {
 
-    deleteCookie("username");
+    deleteCookie("id");
 
     window.location.href = "../login/index.html";
   });
