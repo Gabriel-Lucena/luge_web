@@ -23,29 +23,45 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const id = getIdByCookie();
 
-  // Fazer uma requisição HTTP para obter a lista de tarefas
   fetch(`http://localhost:3000/task/${id}`)
     .then(response => response.json())
     .then(data => {
-      // Montar o HTML das tarefas com base na resposta da requisição
-      const tasksList = document.getElementById("tasksList");
 
+      const tasksList = document.getElementById("tasksList");
       data.forEach((task) => {
+
+        console.log(data);
         const li = document.createElement("li");
+
+        const label = document.createElement("label");
+        label.className = "todo-item";
 
         const input = document.createElement("input");
         input.type = "checkbox";
-        input.id = task.idTask;
-        input.name = task.name;
+        input.className = "todo-checkbox";
+        input.id = "task" + task.idTask;
+        input.name = "task" + task.idTask;
 
-        const label = document.createElement("label");
-        label.htmlFor = task.idTask;
-        label.textContent = task.string;
+        const div = document.createElement("div");
+        div.className = "todo-text";
 
-        li.appendChild(input);
+        const spanTitle = document.createElement("span");
+        spanTitle.className = "todo-title";
+        spanTitle.textContent = task.name;
+
+        const spanText = document.createElement("span");
+        spanText.textContent = task.string;
+
+        div.appendChild(spanTitle);
+        div.appendChild(spanText);
+
+        label.appendChild(input);
+        label.appendChild(div);
+
         li.appendChild(label);
 
         tasksList.appendChild(li);
+
       });
     })
     .catch(error => {

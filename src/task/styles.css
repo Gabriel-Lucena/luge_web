@@ -57,3 +57,24 @@ body {
   color: #333333;
   cursor: pointer;
 }
+
+.todo-item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+}
+
+.todo-checkbox {
+  margin-right: 10px;
+}
+
+.todo-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.todo-title {
+  font-weight: bold;
+}
