@@ -1,0 +1,10 @@
+{
+  "name": "luge_web",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "jest src/tests/session/deleteCookie.test.js"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
