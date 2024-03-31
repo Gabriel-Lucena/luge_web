@@ -4,7 +4,6 @@
  * @param {string} name - The name of the cookie to check.
  * @return {boolean} Returns true if the cookie exists, false otherwise.
  */
-
 export function checkCookie(name) {
   const cookieArr = document.cookie.split(";");
 
@@ -46,7 +45,7 @@ export function deleteCookie(name) {
  * @param {number} days - The number of days until the cookie expires
  * @return {void}
  */
-function setCookie(name, value, days) {
+export function setCookie(name, value, days) {
   const date = new Date();
   date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
   const expires = "expires=" + date.toUTCString();

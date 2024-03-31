@@ -23,9 +23,9 @@ document.addEventListener("DOMContentLoaded", function () {
       })
       .then(response => response.json())
       .then(data => {
-        if (data === 1) {
+        if (data > 0) {
 
-          setCookie("username", username, 1);
+          setCookie("id", data, 1);
 
           window.location.href = "../task/index.html";
         } else {
