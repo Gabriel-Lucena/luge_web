@@ -1,9 +1,12 @@
 import {
-  checkCookie,
-  redirectToLogin,
   deleteCookie
-} from '../session/cookies.js';
-
+} from "../session/deleteCookie.js";
+import {
+  redirectToLogin
+} from "../session/redirectToLogin.js";
+import {
+  checkCookie
+} from "../session/checkCookie.js";
 import {
   getIdByCookie
 } from '../session/getIdByCookie.js';

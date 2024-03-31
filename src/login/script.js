@@ -1,6 +1,6 @@
 import {
   setCookie
-} from "../session/cookies.js";
+} from "../session/setCookie.js";
 
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("loginForm");
