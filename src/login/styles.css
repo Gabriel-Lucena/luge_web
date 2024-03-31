@@ -1,80 +1,54 @@
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-/* :root {
-  font-size: 62.5%;
-} */
-
 body {
-  font-family: "Open Sans", sans-serif;
-
-  background: linear-gradient(45deg, rgba(9, 9, 221, 0.877), rgb(20, 160, 62));
-  background-size: 400% 400%;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
 }
 
-#login {
-  width: 250px;
-  height: 175px;
-  margin: 200px auto;
+.login-container {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+}
 
-  padding: 5px;
+.login-form h2 {
+  text-align: center;
+  color: #333333;
+}
 
-  background-color: aliceblue;
+.input-group {
+  margin-bottom: 15px;
+}
 
+.input-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #666666;
+}
+
+.input-group input {
+  width: 93%;
+  padding: 10px;
   border-radius: 4px;
-  border: 2px solid rgb(214, 236, 255);
+  border: 1px solid #cccccc;
 }
 
-input {
-  border-color: rgb(152, 207, 255);
-  border-style: solid;
+.input-group button {
+  width: 100%;
+  padding: 10px;
+  border: none;
   border-radius: 4px;
-
-  margin: 0 0 0 30px;
-
-  background: aliceblue;
-  background-position: 10px 10px;
-  background-repeat: no-repeat;
-
-  transition: border-color 1s ease-in-out;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-input:focus {
-  border-color: rgba(9, 9, 221, 0.877);
-}
-
-button {
-  margin: 15px auto 0px;
-
-  width: 100px;
-  height: 30px;
-
-  font-family: "Open Sans", sans-serif;
-
-  border: 2px solid rgba(145, 145, 216, 0.877);
-  border-radius: 4px;
-}
-
-button:hover {
-  transition: 1s;
-  transition-timing-function: ease-out;
-
-  background-color: rgb(187, 223, 255);
-}
-
-button:active {
-  background-color: aliceblue;
-  transition: 0.02s;
-}
-
-p {
-  margin-bottom: 10px;
-  margin-left: 5px;
-}
-
-#p-password {
-  margin-top: 10px;
+.input-group button:hover {
+  background-color: #0056b3;
 }
