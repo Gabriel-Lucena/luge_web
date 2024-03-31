@@ -1,6 +1,7 @@
 import {
   checkCookie,
-  redirectToLogin
+  redirectToLogin,
+  deleteCookie
 } from '../session/cookies.js';
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -15,5 +16,8 @@ document.addEventListener("DOMContentLoaded", function () {
 document
   .getElementById("logoutButton")
   .addEventListener("click", function () {
+
+    deleteCookie("username");
+
     window.location.href = "../login/index.html";
   });
