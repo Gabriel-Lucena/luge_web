@@ -11,6 +11,10 @@ import {
   getIdByCookie
 } from '../session/getIdByCookie.js';
 
+import {
+  changeStatus
+} from "../fun/changeStatus.js";
+
 document.addEventListener("DOMContentLoaded", function () {
   // Verificar se o cookie "username" existe
   if (!checkCookie("id")) {
@@ -30,7 +34,6 @@ document.addEventListener("DOMContentLoaded", function () {
       const tasksList = document.getElementById("tasksList");
       data.forEach((task) => {
 
-        console.log(data);
         const li = document.createElement("li");
 
         const label = document.createElement("label");
@@ -75,6 +78,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+
 document
   .getElementById("logoutButton")
   .addEventListener("click", function () {
@@ -83,3 +87,37 @@ document
 
     window.location.href = "../login/index.html";
   });
+
+
+document
+  .getElementById("saveButton")
+  .addEventListener("click", function () {
+    const checkboxes = document.querySelectorAll('.todo-checkbox');
+
+    const tasksStatus = [];
+
+    checkboxes.forEach(function (checkbox) {
+      const taskId = checkbox.id.replace('task', '');
+
+      const status = checkbox.checked ? 'true' : 'false';
+
+      changeStatus(taskId, status);
+
+    });
+
+    console.log(tasksStatus);
+
+  });
+
+
+// const checkboxes = document.querySelectorAll('input');
+
+// checkboxes.forEach(function (checkbox) {
+//   checkbox.addEventListener("click", function (event) {
+//     const taskId = event.target.id.replace('task', '');
+//     const status = checkbox.checked ? 'true' : 'false';
+
+//     console.log(taskId, status);
+//     changeStatus(taskId, status);
+//   });
+// });
