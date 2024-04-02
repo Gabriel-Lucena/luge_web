@@ -11,10 +11,6 @@ import {
   getIdByCookie
 } from '../session/getIdByCookie.js';
 
-import {
-  changeStatus
-} from "../fun/changeStatus.js";
-
 document.addEventListener("DOMContentLoaded", function() {
   // Verificar se o cookie "username" existe
   if (!checkCookie("id")) {
@@ -86,25 +82,5 @@ document
     deleteCookie("id");
 
     window.location.href = "../login/index.html";
-  });
-
-document
-  .getElementById("saveButton")
-  .addEventListener("click", function() {
-    const checkboxes = document.querySelectorAll('.todo-checkbox');
-
-    const tasksStatus = [];
-
-    checkboxes.forEach(function(checkbox) {
-      const taskId = checkbox.id.replace('task', '');
-
-      const status = checkbox.checked ? 'true' : 'false';
-
-      changeStatus(taskId, status);
-
-    });
-
-    console.log(tasksStatus);
-
   });
 

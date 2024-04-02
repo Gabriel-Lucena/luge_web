@@ -33,14 +33,6 @@ body {
   color: white;
 }
 
-.save {
-  background-color: hsl(240, 70%, 54%);
-}
-
-.save:hover {
-  background-color: hsl(240, 70%, 46%);
-}
-
 .logout {
   background-color: hsl(354, 70%, 54%);
 }
