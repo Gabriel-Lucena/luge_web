@@ -8,11 +8,11 @@
 
 O projeto ainda está sendo desenvolvidoo e as próximas versões serão voltadas nas seguintes tarefas:
 
-- [x] Atualizaçõa de status de tarefas automáticas
-- [ ] Redirecionamento de tela anterior ao carregamento
+- [x] Atualização de status de tarefas automáticas
 - [ ] Testes unitários às funções
 - [ ] Edição de tarefas
 - [ ] Inserção de tarefas
+- [ ] Redirecionamento de tela anterior ao carregamento
 
 ## 📫 Contribuindo para luge_web
 
