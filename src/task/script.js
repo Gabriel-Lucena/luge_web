@@ -15,7 +15,7 @@ import {
   changeStatus
 } from "../fun/changeStatus.js";
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function() {
   // Verificar se o cookie "username" existe
   if (!checkCookie("id")) {
     // Se o cookie "username" não existir, redirecionar para a página de login
@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function() {
 
   const id = getIdByCookie();
 
@@ -81,22 +81,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document
   .getElementById("logoutButton")
-  .addEventListener("click", function () {
+  .addEventListener("click", function() {
 
     deleteCookie("id");
 
     window.location.href = "../login/index.html";
   });
 
-
 document
   .getElementById("saveButton")
-  .addEventListener("click", function () {
+  .addEventListener("click", function() {
     const checkboxes = document.querySelectorAll('.todo-checkbox');
 
     const tasksStatus = [];
 
-    checkboxes.forEach(function (checkbox) {
+    checkboxes.forEach(function(checkbox) {
       const taskId = checkbox.id.replace('task', '');
 
       const status = checkbox.checked ? 'true' : 'false';
@@ -109,15 +108,3 @@ document
 
   });
 
-
-// const checkboxes = document.querySelectorAll('input');
-
-// checkboxes.forEach(function (checkbox) {
-//   checkbox.addEventListener("click", function (event) {
-//     const taskId = event.target.id.replace('task', '');
-//     const status = checkbox.checked ? 'true' : 'false';
-
-//     console.log(taskId, status);
-//     changeStatus(taskId, status);
-//   });
-// });
