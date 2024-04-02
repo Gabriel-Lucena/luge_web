@@ -2,22 +2,9 @@ import {
   deleteCookie
 } from "../session/deleteCookie.js";
 import {
-  redirectToLogin
-} from "../session/redirectToLogin.js";
-import {
-  checkCookie
-} from "../session/checkCookie.js";
-import {
   getIdByCookie
 } from '../session/getIdByCookie.js';
 
-document.addEventListener("DOMContentLoaded", function() {
-  // Verificar se o cookie "username" existe
-  if (!checkCookie("id")) {
-    // Se o cookie "username" não existir, redirecionar para a página de login
-    redirectToLogin();
-  }
-});
 
 document.addEventListener("DOMContentLoaded", function() {
 
