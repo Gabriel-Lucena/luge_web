@@ -3,19 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login 🔒</title>
+    <title>Criar conta</title>
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="./images/favicon.png"
+      href="./images/favicon.ico"
     />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
     <div class="login-container">
-      <form class="login-form" id="loginForm" action="#" method="post">
-        <h2>Login</h2>
+      <form class="login-form" id="createAccountForm" action="#" method="post">
+        <h2>Criar conta</h2>
+        <h3>Usuário já existe!</h3>
         <div class="input-group">
           <label for="username">Usuário:</label>
           <input type="text" id="username" name="username" required />
@@ -25,13 +26,19 @@
           <input type="password" id="password" name="password" required />
         </div>
         <div class="input-group">
-          <button type="submit">Entrar</button>
+          <label for="confirmPassword">Confirmar senha:</label>
+          <input
+            type="password"
+            id="confirmPassword"
+            name="confirmPassword"
+            required
+          />
+        </div>
+        <div class="input-group">
+          <button type="submit">Criar conta!</button>
         </div>
       </form>
-
-      <a href="../password">Criar conta</a>
     </div>
-
-    <script type="module" src="./script.js" defer></script>
+    <script type="module" src="./scripts/createAccount.js" defer></script>
   </body>
 </html>

@@ -9,8 +9,7 @@
 O projeto ainda está sendo desenvolvidoo e as próximas versões serão voltadas nas seguintes tarefas:
 
 - [x] Atualização de status de tarefas automáticas
-- [ ] Testes unitários às funções
-- [ ] Edição de tarefas
+- [x] Criação de usuário
 - [ ] Inserção de tarefas
 - [ ] Redirecionamento de tela anterior ao carregamento
 
