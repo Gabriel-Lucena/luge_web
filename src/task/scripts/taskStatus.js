@@ -1,10 +1,12 @@
-import { changeStatus } from "../../fun/changeStatus.js";
+import {
+  changeStatus
+} from "../../fun/changeStatus.js";
 
-setTimeout(function() {
+setTimeout(function () {
   const checkboxes = document.querySelectorAll('input');
 
-  checkboxes.forEach(function(checkbox) {
-    checkbox.addEventListener("click", function(event) {
+  checkboxes.forEach(function (checkbox) {
+    checkbox.addEventListener("click", function (event) {
       const taskId = event.target.id.replace('task', '');
       const status = checkbox.checked ? 'true' : 'false';
 
@@ -14,5 +16,3 @@ setTimeout(function() {
   });
   console.log(document.querySelector("input"));
 }, 100);
-
-

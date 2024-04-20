@@ -2,7 +2,6 @@ import {
   getIdByCookie
 } from '../../session/getIdByCookie.js';
 
-
 document.addEventListener("DOMContentLoaded", function () {
 
   const id = getIdByCookie();
