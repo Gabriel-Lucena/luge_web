@@ -2,14 +2,19 @@ import {
   getIdByCookie
 } from "../../session/getIdByCookie.js";
 
-setTimeout(function () {
-  const checkboxes = document.querySelectorAll('img');
+import {
+  destroyTask
+} from "../../fun/destroyTask.js";
 
-  checkboxes.forEach(function (checkbox) {
+setTimeout(function () {
+  const images = document.querySelectorAll('img');
+
+  images.forEach(function (checkbox) {
     checkbox.addEventListener("click", function (event) {
       const idTask = event.target.id.replace('delete', '');
       const idUser = getIdByCookie();
 
+      destroyTask(idTask);
       fetch(`http://localhost:3000/task/`, {
           method: "DELETE",
           headers: {
@@ -29,4 +34,4 @@ setTimeout(function () {
         });
     });
   });
-}, 100);
+}, 300);

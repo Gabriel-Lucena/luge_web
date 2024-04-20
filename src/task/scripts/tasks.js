@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
       data.forEach((task) => {
 
         const li = document.createElement("li");
+        li.id = "task" + task.idTask;
 
         const label = document.createElement("label");
         label.className = "todo-item";
@@ -41,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
         spanText.textContent = task.string;
 
         const deleteButton = document.createElement("img");
-        deleteButton.src = "../images/delete.png";
+        deleteButton.src = "../task/images/delete.png";
         deleteButton.id = "delete" + task.idTask;
 
         div.appendChild(spanTitle);
@@ -54,7 +55,6 @@ document.addEventListener("DOMContentLoaded", function () {
         li.appendChild(deleteButton);
 
         tasksList.appendChild(li);
-
       });
     })
     .catch(error => {

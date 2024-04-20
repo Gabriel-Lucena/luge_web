@@ -98,3 +98,7 @@ body {
 .todo-title {
   font-weight: bold;
 }
+
+img {
+  cursor: pointer;
+}

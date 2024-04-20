@@ -10,9 +10,7 @@ setTimeout(function () {
       const taskId = event.target.id.replace('task', '');
       const status = checkbox.checked ? 'true' : 'false';
 
-      console.log(taskId, status);
       changeStatus(taskId, status);
     });
   });
-  console.log(document.querySelector("input"));
 }, 100);
