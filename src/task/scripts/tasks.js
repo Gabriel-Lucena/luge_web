@@ -3,7 +3,7 @@ import {
 } from '../../session/getIdByCookie.js';
 
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
 
   const id = getIdByCookie();
 
@@ -41,6 +41,10 @@ document.addEventListener("DOMContentLoaded", function() {
         const spanText = document.createElement("span");
         spanText.textContent = task.string;
 
+        const deleteButton = document.createElement("img");
+        deleteButton.src = "../images/delete.png";
+        deleteButton.id = "delete" + task.idTask;
+
         div.appendChild(spanTitle);
         div.appendChild(spanText);
 
@@ -48,6 +52,7 @@ document.addEventListener("DOMContentLoaded", function() {
         label.appendChild(div);
 
         li.appendChild(label);
+        li.appendChild(deleteButton);
 
         tasksList.appendChild(li);
 
@@ -57,4 +62,3 @@ document.addEventListener("DOMContentLoaded", function() {
       console.error("Erro ao obter as tarefas:", error);
     });
 });
-
